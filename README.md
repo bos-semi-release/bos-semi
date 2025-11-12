@@ -15,7 +15,7 @@ If you are an existing BOS partner and require repository access, please contact
 
 ## Support
 For inquiries related to software access, licensing, or technical support:
-- 📧 **support@bos-semi.com**
+- 📧 **github-support@bos-semi.com**
 - 🌐 [https://www.bos-semi.com](https://www.bos-semi.com)
 
 ---
