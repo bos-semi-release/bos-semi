@@ -19,9 +19,9 @@ For inquiries related to software access, licensing, or technical support:
 - 🌐 [https://www.bos-semi.com](https://www.bos-semi.com)
 
 
-## Demo 
+## AI Model Demo Video Streaming 
 
-- [Watch Demo video](https://bos-semi-demo-contents.s3.ap-northeast-2.amazonaws.com/public/demo_logo_text_v1.1.mp4)
+- [Watch YoloV8 Object Detection Demo video](https://bos-semi-demo-contents.s3.ap-northeast-2.amazonaws.com/public/demo_logo_text_v1.1.mp4)
 
 
 ---
