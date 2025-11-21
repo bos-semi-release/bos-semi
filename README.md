@@ -7,7 +7,7 @@ Authorized customers can access the private repositories to explore, build, and 
 
 ---
 
-## Supported AI Models and Their Performance
+## Supported AI Models and Performance
 
 ### LLM and VLM
 
