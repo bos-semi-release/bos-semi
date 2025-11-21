@@ -18,6 +18,12 @@ For inquiries related to software access, licensing, or technical support:
 - 📧 **github-support@bos-semi.com**
 - 🌐 [https://www.bos-semi.com](https://www.bos-semi.com)
 
+
+## Demo 
+
+- [Watch Demo video](https://bos-semi-demo-contents.s3.ap-northeast-2.amazonaws.com/public/demo_logo_text_v1.1.mp4)
+
+
 ---
 
 © 2025 BOS Semiconductor. All rights reserved.
