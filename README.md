@@ -32,8 +32,6 @@ Authorized customers can access the private repositories to explore, build, and 
 | LLaMA 3.2 8B | Gen5 | 16 | 114.73 ms | 9.99 | 159.81 |
 || Gen4 | 16 | 100.3 ms | 9.97 | 159.53 |
 || Gen3 | 16 | 116.42 ms | 10.0 | 159.96 |
- 
- * DRAM clock: 7.5 GHz
 
 <br> 
 
@@ -51,8 +49,6 @@ Authorized customers can access the private repositories to explore, build, and 
 ||  | 1 | 320 x 320 | ~138 |
 || Gen3 | 1 | 256 x 256 | ~ 140 |
 ||  | 1 | 320 x 320 | ~ 116 |
-
-* DRAM clock: 7.5 GHz
 
 <br>
 
