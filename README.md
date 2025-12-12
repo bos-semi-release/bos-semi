@@ -57,6 +57,7 @@ Authorized customers can access the private repositories to explore, build, and 
 ## AI Model Demo Video Streaming 
 
 - [Watch Demo video](https://bos-semi-demo-contents.s3.ap-northeast-2.amazonaws.com/public/demo_logo_text_v1.1.mp4)
+- [Watch Demo Video2](https://github.com/bos-semi-release/bos-semi/blob/main/AIModelDemo/index.html)
 
 ---
 
