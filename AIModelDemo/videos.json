@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Big Buck Bunny",
+        "description": "A short computer-animated comedy film by the Blender Institute, part of the Blender Foundation.",
+        "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "poster_url": "https://picsum.photos/seed/bunny/320/180"
+    },
+    {
+        "title": "Elephants Dream",
+        "description": "The first open-source animated short film, also by the Blender Foundation.",
+        "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "poster_url": "https://picsum.photos/seed/elephants/320/180"
+    },
+    {
+        "title": "Sintel",
+        "description": "A 2010 computer-animated short film by the Blender Foundation.",
+        "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+        "poster_url": "https://picsum.photos/seed/sintel/320/180"
+    }
+]

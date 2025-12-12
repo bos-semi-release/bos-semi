@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video Codec Debug</title>
+</head>
+
+<body>
+    <h1>Debug Video Playback</h1>
+    <video id="debugVideo" controls width="400">
+        <source src="videos/Qwen_final.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+    <div id="log" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px; font-family: monospace;"></div>
+
+    <script>
+        const video = document.getElementById('debugVideo');
+        const logDiv = document.getElementById('log');
+
+        function log(msg) {
+            logDiv.innerHTML += msg + '<br>';
+        }
+
+        video.addEventListener('error', (e) => {
+            if (video.error) {
+                log(`Error Code: ${video.error.code}`);
+                log(`Error Message: ${video.error.message}`);
+                switch (video.error.code) {
+                    case 1: log('MEDIA_ERR_ABORTED: User aborted.'); break;
+                    case 2: log('MEDIA_ERR_NETWORK: Network error.'); break;
+                    case 3: log('MEDIA_ERR_DECODE: Decode error (corruption or unsupported feature).'); break;
+                    case 4: log('MEDIA_ERR_SRC_NOT_SUPPORTED: Format not supported (Codec issue).'); break;
+                    default: log('Unknown error.');
+                }
+            } else {
+                log('Error event fired but no error object.');
+            }
+        });
+
+        video.addEventListener('loadeddata', () => {
+            log('Video loaded successfully.');
+        });
+
+        // Try to play immediately to trigger error if load fails
+        video.play().catch(e => log(`Play Catch: ${e.name} - ${e.message}`));
+    </script>
+</body>
+
+</html>

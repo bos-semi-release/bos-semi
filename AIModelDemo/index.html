@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Intro</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a69bd;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+        }
+
+        #side-menu {
+            width: 267px;
+            min-width: 267px;
+            flex-shrink: 0;
+            background-color: #fff;
+            padding: 1rem 0.5rem;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 70px);
+            /* Adjust based on header height */
+            overflow-y: auto;
+        }
+
+        #side-menu a {
+            display: block;
+            padding: 0.5rem;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        #side-menu a::before {
+            content: "•";
+            display: inline-block;
+            margin-right: 0.25rem;
+        }
+
+        #side-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            height: calc(100vh - 102px);
+            /* Adjust based on header/footer height */
+            overflow-y: auto;
+        }
+
+        .video-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            height: 400px;
+            /* Fixed height for the card */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card video {
+            /* Specificity increased */
+            width: 100%;
+            height: 0;
+            /* Important for flex-grow to work correctly */
+            flex: 4;
+            /* Takes 80% of available space */
+            object-fit: contain;
+            /* Ensures the whole video is visible, letterboxing if necessary */
+            display: block;
+        }
+
+        .video-text-content {
+            flex: 1;
+            /* Takes 20% of available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Distribute space between title and description */
+            padding: 0 1rem 1rem 1rem;
+            /* Padding for the entire text content area */
+        }
+
+        .video-text-content h3 {
+            margin: 0;
+            padding: 1rem 0 0.5rem 0;
+            /* Adjusted padding to remove left/right as it's now on parent */
+            font-size: 1.2rem;
+        }
+
+        .video-text-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .video-text-content th,
+        .video-text-content td {
+            border: 1px solid #ddd;
+            padding: 0.4rem;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        .video-text-content th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AI Model Introductions</h1>
+    </header>
+    <div class="container">
+        <nav id="side-menu">
+            <!-- Menu links will be inserted here -->
+        </nav>
+        <main id="video-gallery">
+            <!-- Videos will be loaded here dynamically -->
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 AI Model Intro</p>
+    </footer>
+    <script>
+        const sections = [
+            {
+                title: "Object Detection AI Workloads",
+                videos: [
+                    {
+                        "title": "Sparse Scene Rendering",
+                        "description": "A short computer-animated comedy film by the Blender Institute, part of the Blender Foundation.",
+                        "video_url": "videos/ssr_video.mp4"
+                    },
+                    {
+                        "title": "YoLoV3",
+                        "description": "Real-time object detection system.",
+                        "video_url": "videos/test_video.mp4"
+                    },
+                    {
+                        "title": "DeepLab V3+",
+                        "description": "Semantic segmentation architecture.",
+                        "video_url": "videos/ssr_video.mp4"
+                    },
+                    {
+                        "title": "Panoptic DeepLab",
+                        "description": "Panoptic segmentation model.",
+                        "video_url": "videos/ssr_video.mp4"
+                    },
+                    {
+                        "title": "FastOFT",
+                        "description": "Optical flow tracking model.",
+                        "video_url": "videos/ssr_video.mp4"
+                    },
+                    {
+                        "title": "ResNet50",
+                        "description": "Deep residual learning for image recognition.",
+                        "video_url": "videos/ssr_video.mp4"
+                    }
+                ]
+            },
+            {
+                title: "LLM/VLM AI Workloads",
+                videos: [
+                    {
+                        "title": "Qwen 2.5 VL 3B",
+                        "description": "The first open-source animated short film, also by the Blender Foundation.",
+                        "video_url": "videos/Qwen_video.mp4"
+                    },
+                    {
+                        "title": "Qwen 2.5 VL 7B",
+                        "description": "Vision language model.",
+                        "video_url": "videos/Qwen_video.mp4"
+                    },
+                    {
+                        "title": "LLaMA 3.1 8B",
+                        "description": "Large language model.",
+                        "video_url": "videos/Qwen_video.mp4"
+                    },
+                    {
+                        "title": "LLaMA 3.2 1B",
+                        "description": "Large language model.",
+                        "video_url": "videos/Qwen_video.mp4"
+                    },
+                    {
+                        "title": "LLaMA 3.2 3B",
+                        "description": "Large language model.",
+                        "video_url": "videos/Qwen_video.mp4"
+                    }
+                ]
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoGallery = document.getElementById('video-gallery');
+            const sideMenu = document.getElementById('side-menu');
+
+            let globalVideoIndex = 0;
+
+            sections.forEach((section, sectionIndex) => {
+                // Create Section Header
+                const sectionHeader = document.createElement('h2');
+                sectionHeader.textContent = section.title;
+                sectionHeader.style.width = '100%';
+                sectionHeader.style.borderBottom = '1px solid #ddd';
+                sectionHeader.style.paddingBottom = '0.5rem';
+                sectionHeader.style.marginTop = sectionIndex > 0 ? '2rem' : '0';
+                videoGallery.appendChild(sectionHeader);
+
+                // Create Section Container for Flexbox layout
+                const sectionContainer = document.createElement('div');
+                sectionContainer.style.display = 'flex';
+                sectionContainer.style.flexWrap = 'wrap';
+                sectionContainer.style.gap = '2rem';
+                sectionContainer.style.width = '100%';
+                videoGallery.appendChild(sectionContainer);
+
+                // Add Section to Side Menu
+                const menuLink = document.createElement('a');
+                menuLink.href = `#section-${sectionIndex}`;
+                menuLink.textContent = section.title;
+                menuLink.style.cursor = 'pointer'; // Make sure cursor indicates clickability
+                menuLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    sectionHeader.scrollIntoView({ behavior: 'smooth' });
+                });
+                sideMenu.appendChild(menuLink);
+                sectionHeader.id = `section-${sectionIndex}`;
+
+                // Process Videos in Section
+                section.videos.forEach((videoData) => {
+                    const videoCard = document.createElement('div');
+                    videoCard.className = 'video-card';
+                    videoCard.id = `video-${globalVideoIndex}`; // Assign a unique ID
+                    globalVideoIndex++;
+
+                    const videoElement = document.createElement('video');
+                    videoElement.controls = true;
+                    if (videoData.poster_url) {
+                        videoElement.poster = videoData.poster_url;
+                    }
+                    videoElement.addEventListener('loadeddata', function () {
+                        this.currentTime = 1;
+                    }, { once: true });
+
+                    videoElement.preload = 'metadata';
+
+                    const sourceElement = document.createElement('source');
+                    sourceElement.src = videoData.video_url;
+                    sourceElement.type = 'video/mp4';
+
+                    videoElement.appendChild(sourceElement);
+
+                    const titleElement = document.createElement('h3');
+                    titleElement.textContent = videoData.title;
+
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    const tbody = document.createElement('tbody');
+
+                    const headerRow = document.createElement('tr');
+                    let headers;
+                    // Logic for specific table header based on SECTION (all Obj Detection models get this)
+                    if (sectionIndex === 0) {
+                        headers = ["Input Size", "FPS", "Target FPS"];
+                    } else {
+                        headers = ["t/s/u", "ttfs", "target t/s/u"];
+                    }
+                    headers.forEach(headerText => {
+                        const th = document.createElement('th');
+                        th.textContent = headerText;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+
+                    // Data Rows
+                    const dataRow = document.createElement('tr');
+                    let rowData;
+                    if (sectionIndex === 0) {
+                        rowData = ["1920x1080", "60", "60"]; // Dummy values for input size, FPS, Target FPS
+                    } else {
+                        rowData = ["Data 1-1", "Data 1-2", "Data 1-3"];
+                    }
+
+                    rowData.forEach(text => {
+                        const td = document.createElement('td');
+                        td.textContent = text;
+                        dataRow.appendChild(td);
+                    });
+                    tbody.appendChild(dataRow);
+
+                    table.appendChild(thead);
+                    table.appendChild(tbody);
+
+                    const textContentDiv = document.createElement('div');
+                    textContentDiv.className = 'video-text-content';
+                    textContentDiv.appendChild(titleElement);
+                    textContentDiv.appendChild(table);
+
+                    videoCard.appendChild(videoElement);
+                    videoCard.appendChild(textContentDiv);
+
+                    sectionContainer.appendChild(videoCard);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
